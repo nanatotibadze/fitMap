@@ -1,0 +1,95 @@
+.sidebar {
+  flex-basis: 50rem;
+  background-color: $color-dark--1;
+  padding: 3rem 5rem 4rem 5rem;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-basis: 20rem;
+    padding: 3rem 2rem 4rem 2rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    height: 45rem;
+    padding: 3rem 5rem 4rem 5rem;
+  }
+}
+
+.logo {
+  height: 12rem;
+  align-self: center;
+  margin-bottom: 0;
+}
+
+.workouts {
+  list-style: none;
+  height: 77vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.workouts::-webkit-scrollbar {
+  width: 0;
+}
+
+.workout {
+  background-color: $color-dark--2;
+  border-radius: 5px;
+  padding: 1.5rem 2.25rem;
+  margin-bottom: 1.75rem;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.75rem 1.5rem;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__title {
+    font-size: 1.7rem;
+    font-weight: 600;
+    grid-column: 1 / -1;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__details {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__icon {
+    font-size: 1.8rem;
+    margin-right: 0.2rem;
+    height: 0.28rem;
+  }
+
+  &__value {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+  }
+
+  &__unit {
+    font-size: 1.1rem;
+    color: $color-light--1;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+  &--running {
+    border-left: 5px solid $color-brand--2;
+  }
+  &--cycling {
+    border-left: 5px solid $color-brand--1;
+  }
+
+  &--hiking {
+    border-left: 5px solid $color-brand--3;
+  }
+
+  &--yoga {
+    border-left: 5px solid $color-brand--4;
+  }
+}

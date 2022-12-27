@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "sass": "^1.56.2"
+  },
+  "name": "starter",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
